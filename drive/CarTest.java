@@ -59,7 +59,7 @@ public class CarTest
         car.addGas (5.0);
         assertEquals(5.0, car.getGasTank(),1e-6);
         car.addGas (10.0);
-        assertEquals(10.0, car.getGasTank(),1e-6);
+        assertEquals(15.0, car.getGasTank(),1e-6);
         car.addGas (15.0);
     }
     @Test

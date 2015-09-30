@@ -20,10 +20,10 @@ public class Car
     /**
      * construtor for objects of class Car that specifies the fuel efficiency
      */
-    public Car(double fuelEfficiency)
+    public Car(double Efficiency)
     {
         // initialise instance variables
-        fuelEfficiency = fuelEfficiency;
+        fuelEfficiency = Efficiency;
         fuelInTank= 0;
     }
 
@@ -42,7 +42,8 @@ public class Car
         // put your code here
         fuelInTank -= distance / fuelEfficiency;
     }
-    
+    
+
     /**
      *returns amount of gas in the tank in units of gallons
      *
@@ -54,7 +55,8 @@ public class Car
         // put your code here
         return fuelInTank;
     }
-    
+    
+
     /**
      * Increments the fuel in the car's tank by the amount in gallons
      *
