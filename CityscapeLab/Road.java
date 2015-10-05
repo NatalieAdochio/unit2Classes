@@ -6,21 +6,21 @@ import java.awt.geom.Line2D;
 import java.awt.geom.Point2D;
 
 /**
- * Making the building.
+ * Write a description of class Road here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Building
+public class Road
 {
     /** description of instance variable x (add comment for each instance variable) */
     private int xLeft;
     private int yTop;
 
     /**
-     * Default constructor for objects of class Building
+     * Default constructor for objects of class Road
      */
-    public Building(int x, int y)
+    public Road(int x ,int y)
     {
         // initialise instance variables
         xLeft = x;
@@ -40,26 +40,16 @@ public class Building
      */
     public void draw(Graphics2D g2)
     {
-        // making the standard building
-        Rectangle tallestTower = new Rectangle(xLeft+100, yTop+40, 105,400);
-        g2.setColor(Color.GRAY);
-        g2.fill(tallestTower);
-        
-        for(int y = yTop+45; y < yTop+400; y+=20)
+        // put your code here
+        Rectangle road = new Rectangle(xLeft+0,yTop+440,800,200);
+        g2.setColor(Color.BLACK);
+        g2.fill(road);
+        for(int x= xLeft+0; x < xLeft+800; x+=80)
         {
-        Rectangle window1 = new Rectangle(xLeft+105, y, 15,15);
-        Rectangle window2 = new Rectangle(xLeft+125, y, 15, 15);
-        Rectangle window3 = new Rectangle(xLeft+145, y, 15,15);
-        Rectangle window4 = new Rectangle(xLeft+165, y, 15, 15);
-        Rectangle window5 = new Rectangle(xLeft+185, y, 15, 15); 
+        Rectangle roadSquare = new Rectangle(x, yTop+495, 60,20);
         g2.setColor(Color.YELLOW);
-        g2.fill(window1);
-        g2.fill(window2);
-        g2.fill(window3);
-        g2.fill(window4);
-        g2.fill(window5);
-        }
-        
+        g2.fill(roadSquare);
+    }
     }
 
 }
