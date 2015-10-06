@@ -41,11 +41,11 @@ public class AnotherBuilding
     public void draw(Graphics2D g2)
     {
         // put your code here
-        Rectangle towerTower = new Rectangle(xLeft+90, yTop+40, 140,400);
-        g2.setColor(Color.BLUE);
+        Rectangle towerTower = new Rectangle(xLeft+95, yTop+210, 135,300);
+        g2.setColor(Color.GRAY);
         g2.fill(towerTower);
     
-       for(int y = yTop+45; y < yTop+400; y+=20)
+       for(int y = yTop+215; y < yTop+435; y+=20)
         {
         Rectangle window1 = new Rectangle(xLeft+105, y, 15,15);
         Rectangle window2 = new Rectangle(xLeft+125, y, 15, 15);

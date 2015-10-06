@@ -14,13 +14,14 @@ public class CityscapeComponent extends JComponent
 {
     // define the objects in your Cityscape as instance variables
     // ...
-    public Color inputOfUser;
-    
+    private Color inputOfUser;
+    private Car theCar;
     
     // define the CityscapeComponent contructor and intiailize all instance variables
     // ...
     public CityscapeComponent(Color inputOfUser) {
         this.inputOfUser = inputOfUser;
+        this.theCar = new Car(0,0);
     }
     
     
@@ -29,7 +30,7 @@ public class CityscapeComponent extends JComponent
      * It does not need to be invoked explicitly.
      *
      */
-    @Override
+ 
     public void paintComponent(Graphics g)
     {
         
@@ -44,10 +45,16 @@ public class CityscapeComponent extends JComponent
         secondTower.draw(g2);
         AnotherBuilding anotherTower = new AnotherBuilding(150,0);
         anotherTower.draw(g2);
+        AnotherBuilding anotherTower2 = new AnotherBuilding(400,0);
+        anotherTower2.draw(g2);
         Road daRoad = new Road(0,0);
         daRoad.draw(g2);
         Tree daTree = new Tree(0,0);
         daTree.draw(g2);
+        Tree daTree2 = new Tree(360,0);
+        daTree2.draw(g2);
+        
+        theCar.draw(g2);
         // invoke the draw method on each object in your Cityscape
         // ...
         
@@ -62,7 +69,7 @@ public class CityscapeComponent extends JComponent
     {
         // update the objects in the cityscape so they are animated
         // ...
-        
+        theCar.move();
         
         
         // request that the Java Runtime repaints this component by invoking its paintComponent method
