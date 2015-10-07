@@ -25,6 +25,7 @@ public class Car
         // initialise instance variables
         xLeft=x;
         yTop=y;
+   
     }
 
     /**
@@ -53,7 +54,8 @@ public class Car
         g2.fill(backTire);
         
     }
-
+
+
     /**
      * An example of a method - replace this comment with your own
      *  that describes the operation of the method
@@ -68,20 +70,7 @@ public class Car
     public void move()
     {
         // put your code here
-    for( int x = xLeft+550; x < xLeft+800; x-=20)
-    {
-        Rectangle carbod = new Rectangle(x, yTop + 450, 200,30);
-        Ellipse2D.Double frontTire = new Ellipse2D.Double(x,yTop+480,30,30);
-        Ellipse2D.Double backTire = new Ellipse2D.Double(x,yTop+480,30,30);
-        Rectangle hoodOfCar = new Rectangle(x, yTop+420, 140,30);      
-        g2.setColor(Color.RED);
-        g2.fill(carbod);
-        g2.fill(hoodOfCar);
-        g2.setColor(Color.GRAY);
-        g2.fill(frontTire);
-        g2.fill(backTire);
-
-    }
+        xLeft-=40;
     }
 
 }
